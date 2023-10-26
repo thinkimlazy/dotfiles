@@ -15,11 +15,13 @@ vim.opt.rtp:prepend(lazypath)
 plugins = {
     {
     'nvim-telescope/telescope.nvim', tag = '0.1.4',
+-- or                              , branch = '0.1.x',
       dependencies = { 'nvim-lua/plenary.nvim' }
     }
 }
 
 require("lazy").setup(plugins, opts)
+
 
 vim.opt.nu = true
 vim.opt.relativenumber = true

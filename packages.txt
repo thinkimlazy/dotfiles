@@ -1,0 +1,10 @@
+nvim
+fd-find
+fzf
+ripgrep
+tmux
+stow
+ranger
+
+
+# tpm
