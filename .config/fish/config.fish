@@ -13,3 +13,22 @@ end
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
+set EDITOR neovim
+
+#alias add_project="set -a -U PROJECT_PATH"
+function add_project
+	set -a -U PROJECT_PATH (realpath $argv)
+end
+
+
+function dev_project
+#:tmux new-session -A -c ./backend/ -s backend
+	set result (printf '%s\n' $PROJECT_PATH | fzf)
+	echo result is $result
+	tmux new-session -A -c $result -s (path basename $result) nvim .
+end
+
+alias nnn="nnn -H"
+
+alias choose_file="tmux split-window -h nnn -H -p -"
+
