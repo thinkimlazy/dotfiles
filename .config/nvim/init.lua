@@ -29,6 +29,8 @@ vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.incsearch = true
 vim.opt.scrolloff = 8
+vim.opt.autoindent = true
+vim.opt.smartindent = true
 
 vim.g.mapleader = ' '
 
